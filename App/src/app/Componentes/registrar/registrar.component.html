@@ -1,0 +1,23 @@
+<main>
+    <div class="fondo">
+        <div id="formulario">
+          <!-- Tabs Titles -->
+      
+          <!-- Icon -->
+          <div class="row" style="color: white;">
+            <h1 style="margin-top: 25px;">Registrarse</h1>
+          </div>
+      
+          <!-- Form -->
+          <form (submit)="registrar()" [formGroup]="registerForm">
+            <input type="text" id="nombre" formControlName="usuario" class="fadeIn second" placeholder="Usuario*">
+            <input type="text" id="correo" formControlName="correo" class="fadeIn second" placeholder="Correo*">
+            <input type="number" id="telefono" formControlName="telefono" class="fadeIn second" placeholder="Telefono">
+            <input type="password" id="password" formControlName="contrasena1" class="fadeIn third" placeholder="Contraseña">
+            <input type="password" id="passwordc" formControlName="contrasena2" class="fadeIn third" placeholder="Confirmar contraseña">
+            <input type="submit" class="fadeIn fourth" value="Registrarse" [disabled]="registerForm.invalid">
+          </form>
+          
+        </div>
+      </div>
+  </main>

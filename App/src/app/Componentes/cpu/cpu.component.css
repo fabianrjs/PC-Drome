@@ -1,0 +1,23 @@
+.colores{
+    background-color: #0c2833d4; 
+    border: 1px solid #3f748c;
+    color: #fff;
+}
+
+.nombre{
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.btnComprar{
+    background-color: #3f748c;
+    width: 100%;
+}
+
+.btnComprar:hover{
+    background-color: #55a29e;
+}
+
+.letra_tabla{
+    color: #fff;
+}

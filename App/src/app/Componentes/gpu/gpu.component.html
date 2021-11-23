@@ -1,0 +1,44 @@
+<div class="container-fluid" style="margin-bottom: 20px;">
+  <div class="row justify-content-center mt-4">
+      <div class="col-8 p-4 rounded colores">
+        <h1>Targetas Graficas</h1>
+        <hr style="border:3px solid light; margin-top: 15px; margin-bottom: 0px;">
+          <div class="row" *ngFor="let gpu of listaGPU">
+            <div class="col-md-3">
+              <div class="card mt-4">
+                <img src="{{gpu.foto}}"  alt="Card image cap">
+              </div> 
+            </div>
+            <div class="col-md-5" >
+              <div class="card-body" style="padding-left: 0%;">
+                <p class="card-text nombre" >{{gpu.nombre}}</p>
+              </div>
+              <table class="table table-sm ml-5 letra_tabla">
+                <thead>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th style="border-style: none;" scope="row">Marca</th>
+                    <td style="border-style: none;">{{gpu.marca}}</td>
+                  </tr>
+                  <tr>
+                    <th style="border-style: none;" scope="row">Descripcion</th>
+                    <td style="border-style: none;">{{gpu.descripcion}}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="col-md-4">
+              <div class="card-body">
+                <p class="card-text nombre" >PRECIO</p>
+                <h2>${{gpu.precio}}</h2>
+                <button type="button" class="btn btnComprar" style="color: #FFF;" (click)="comprarProducto(gpu)">Agregar al carrito</button>
+              </div>  
+            </div>
+            <hr style="border:3px solid light; margin-top: 15px; margin-bottom: 0px;">
+          </div>
+      </div>
+  </div>
+</div>
+
+

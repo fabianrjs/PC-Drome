@@ -1,0 +1,30 @@
+.colores{
+    background-color: #0c2833d4; 
+    border: 1px solid; 
+    border-color:#3f748c;
+    color: #fff;
+}
+
+.foto{
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 25px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.centrado{
+    padding: 10px;
+}
+.letra_tabla{
+    color: #fff;
+}
+
+.btnComprar{
+    background-color: #3f748c;
+    float: right;
+}
+
+.btnComprar:hover{
+    background-color: #55a29e;
+}

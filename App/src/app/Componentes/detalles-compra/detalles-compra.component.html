@@ -1,0 +1,25 @@
+<div class="container-fluid" style="margin-bottom: 20px;">
+  <div class="row justify-content-center mt-4">
+      <div class="col-8 p-4 rounded colores">
+        <h1 class="centrado">Detalles de compra</h1>
+        <hr style="border:3px solid light; margin-top: 15px;">
+        <div *ngFor="let p of productos" class="row">
+          <div class="col-md-4">
+            <img src={{p.foto}} alt="foto producto" class="foto">
+          </div>
+          <div class="col-md-8" style="margin-top: 10px;">
+            <h2>Nombre: {{p.nombre}}</h2>
+            <h3>Marca: {{p.marca}}</h3>
+            <h3>Precio: ${{p.precio}}</h3>
+            <p >Comprador: {{usuario.correo}} ({{usuario.nombre}})</p>
+            <p>Número de factura: #{{venta.numeroOrden}}</p>
+          </div>
+        </div>
+        <button *ngIf="!admin" type="button" class="btn btnComprar" style="color: #FFF;" routerLink="../../historial">Volver</button>
+        <button *ngIf="admin" type="button" class="btn btnComprar" style="color: #FFF;" routerLink="../../reporte_ventas">Volver</button>
+      </div>
+  </div>
+</div>
+  
+  
+  

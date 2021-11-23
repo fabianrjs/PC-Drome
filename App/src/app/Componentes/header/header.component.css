@@ -1,0 +1,54 @@
+nav{
+    background-color: #0c2833;
+}
+
+.nav-link{
+    color: black;
+}
+
+.item_h{
+    display: inline-block;
+    padding: .5rem 1rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+.item_h:hover{
+    color: #55a29e;
+}
+
+.icon_user{
+    position: relative;
+}
+
+.carrito{
+    margin-right: 15px;
+    margin-top: 3px;
+    display: block;
+}
+
+.carrito:hover{
+    border: solid 1px #28515500;
+}
+
+@media (min-width: 1310px){
+    .navbar-expand-custom {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+    }
+    .navbar-expand-custom .navbar-nav {
+        flex-direction: row;
+    }
+    
+    .navbar-expand-custom .navbar-collapse {
+        display: flex!important;
+    }
+    .navbar-expand-custom .navbar-toggler {
+        display: none;
+    }
+}
+
+.nav{
+    flex-wrap: nowrap;
+}

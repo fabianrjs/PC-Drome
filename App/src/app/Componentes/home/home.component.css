@@ -1,0 +1,24 @@
+.fotosCarrusel{
+    width: 100%;
+    height: 287px;
+}
+
+.btnCarrusel{
+    background-color: #55a29e;
+    border-radius: 25px;
+}
+
+.colores{
+    background-color: #0c2833d4; 
+    color: #fff;
+    border: 1px solid; 
+    border-color:#3f748c;
+}
+
+.alineacionCentro{
+    text-align: center;
+}
+
+img{
+    cursor: pointer;
+}

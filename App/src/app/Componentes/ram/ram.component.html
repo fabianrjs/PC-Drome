@@ -1,0 +1,44 @@
+<div class="container-fluid" style="margin-bottom: 20px;">
+  <div class="row justify-content-center mt-4">
+      <div class="col-8 p-4 rounded colores">
+        <h1>Memorias RAM</h1>
+        <hr style="border:3px solid light; margin-top: 15px; margin-bottom: 0px;">
+          <div class="row" *ngFor="let ram of listaRAM">
+            <div class="col-md-3">
+              <div class="card mt-4">
+                <img src="{{ram.foto}}"  alt="Card image cap"> 
+              </div> 
+            </div>
+            <div class="col-md-5" >
+              <div class="card-body" style="padding-left: 0px;">
+                <p class="card-text nombre" >{{ram.nombre}}</p>
+              </div>
+              <table class="table table-sm ml-5 letra_tabla">
+                <thead style="background-color: #3f748c00;">
+                </thead>
+                <tbody style="background-color: #55a29e00;">
+                  <tr>
+                    <th style="border-style: none;" scope="row">Marca</th>
+                    <td style="border-style: none;">{{ram.marca}}</td>
+                  </tr>
+                  <tr style="background-color: #55a29e00;">
+                    <th style="border-style: none;" scope="row">Descripcion</th>
+                    <td style="border-style: none;">{{ram.descripcion}}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="col-md-4">
+              <div class="card-body">
+                <p class="card-text nombre">PRECIO</p>
+                <h2>${{ram.precio}}</h2>
+                <button type="button" class="btn btnComprar" style="color: #FFF;" (click)="comprarProducto(ram)">Agregar al carrito</button>
+              </div>  
+            </div>
+            <hr style="border:3px solid light; margin-top: 15px; margin-bottom: 0px;">
+          </div>
+      </div>
+  </div>
+</div>
+
+

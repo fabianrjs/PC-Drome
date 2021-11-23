@@ -1,0 +1,24 @@
+<div class="container-fluid" style="margin-bottom: 20px;">
+    <div class="row justify-content-center mt-4">
+        <div class="col-8 p-4 rounded colores">
+          <h1>Reporte de Ventas</h1>
+
+          <table  class="table table-sm ml-5">
+            <thead class="titulos">
+                <tr>
+                  <th scope="col">Orden</th>
+                  <th scope="col">Fecha</th>
+                  <th scope="col">Precio</th>
+                </tr>
+              </thead>
+              <tbody *ngFor="let fact of ventas">
+                <tr class="fila" [routerLink]="['/detallesCompra',fact.numeroOrden]">
+                  <td class="filas" scope="row">#{{fact.numeroOrden}}</td>
+                  <td class="filas">{{fact.fecha}}</td>
+                  <td class="filas">${{fact.precioTotal}}</td>
+                </tr>
+              </tbody>
+        </table>
+        </div>
+    </div>
+  </div>

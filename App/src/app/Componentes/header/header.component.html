@@ -1,0 +1,70 @@
+<nav class="navbar navbar-expand-custom navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" routerLink="./">PC-Drome</a>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li>
+            <a class="item_h" routerLink="Procesadores">Procesadores</a>
+          </li>
+          <li>
+            <a class="item_h" routerLink="RAM">RAM</a>
+          </li>
+          <li>
+            <a class="item_h" routerLink="Graficas">GPU</a>
+          </li>
+          <li>
+            <a class="item_h" routerLink="Tarjetas_Madre">Tarjetas Madre</a>
+          </li>
+          <li>
+            <a class="item_h" routerLink="Discos_duros">Discos Duros</a>
+          </li>
+          <li>
+            <a class="item_h" routerLink="Refrigeracion">Refrigeración</a>
+          </li>
+          <li>
+            <a class="item_h" routerLink="Fuentes_Poder">Fuentes de poder</a>
+          </li>
+          <li>
+            <a class="item_h" routerLink="Chasises">Chasises</a>
+          </li>
+        </ul>
+      </div>
+      
+      <ul class="nav justify-content-end">
+        
+        <li *ngIf="usuario">
+          <a routerLink="carrito" class="carrito">
+            <img src="../../../assets/carritoLogo.png" alt="Imagen Perfil" width="38" height="34">
+          </a>
+        </li>
+        
+
+        <li style="margin-left: 180px;" *ngIf="usuario" >
+          <div class="flex-shrink-0 dropdown">
+            <a href="#" style="margin-top: 2px;" class="d-block link-ligth text-decoration-none dropdown-toggle" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="../../../assets/LogoPerfil.png" alt="Imagen Perfil" width="36" height="36" class="rounded-circle">
+            </a>
+            <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2" style="inset: 0px auto auto -10px; margin: 0px; transform: translate3d(-110px, 34px, 0px);">
+              <!--<li><a class="dropdown-item" routerLink="Perfil">Perfil</a></li>-->
+              <li *ngIf="!admin" ><a class="dropdown-item" routerLink="historial">Compras</a></li>
+              <li *ngIf="admin" ><a class="dropdown-item" routerLink="reporte_ventas">Reportes de ventas</a></li>
+              <li *ngIf="admin" ><a class="dropdown-item" routerLink="gestionar_productos/lista_productos">Gestionar Productos</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a (click)="cerrar_sesion()" class="dropdown-item" routerLink="./">Cerrar Sesión</a></li>
+            </ul>
+          </div>
+        </li>
+        <li *ngIf="!usuario">
+          <a class="item_h" routerLink="iniciar_sesion">Ingresar</a>
+        </li>
+        <li *ngIf=!usuario >
+          <a class="item_h" routerLink="registrarse">Registrarse</a>
+        </li>
+      </ul>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+ 
+  </nav>

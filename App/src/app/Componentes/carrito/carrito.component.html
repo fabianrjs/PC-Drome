@@ -1,0 +1,22 @@
+<div class="container fondo header"><span class="titulo">Carrito</span></div>
+
+<div class="container main">
+    <div class="container div1 fondo">
+        <div *ngFor="let p of listaProductos" id="prod" class="producto">
+            <div class="imagen_producto">
+                <img width="75px" height="75px" alt="imagen de {{p.nombre}}" src="{{p.foto}}"/>
+            </div>
+            <span class="nombre_producto">{{p.nombre}}</span>
+            <span class="precio_producto">${{p.precio}}</span>
+        </div>
+        <div id="empty" class="producto">
+            <span class="empty">No hay productos</span>
+        </div>
+    </div>
+    
+    <div class="container div2 fondo">
+        <h1 class="h1" style="text-align: center; margin-top: 20px;">Precio</h1>
+        <h1 style="text-align: center;">${{precioTotal}}</h1>
+        <button (click)="pagar()" type="button" class="btn btnComprar" style="color: #FFF;">Pagar</button>
+    </div>
+</div>

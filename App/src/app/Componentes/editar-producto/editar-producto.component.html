@@ -1,0 +1,37 @@
+<div class="container-fluid" style="margin-bottom: 20px; width: 100%;">
+    <h2 class="centrado">Editar Producto</h2>
+    <hr style="border:3px solid light; margin-top: 15px;">
+    <form>
+        <select name="Tipo" value="{{producto.tipoProducto}}" class="form-select" aria-label="Default select example" [(ngModel)]="producto.tipoProducto">
+            <option value="Procesador">Procesador</option>
+            <option value="RAM">RAM</option>
+            <option value="Disco Duro">Disco Duro</option>
+            <option value="Fuente de Poder">Fuente de Poder</option>
+            <option value="Tarjeta Grafica">Tarjeta Grafica</option>
+            <option value="Tarjeta Madre">Tarjeta Madre</option>
+            <option value="Disipador">Disipador</option>
+            <option value="Chasis">Chasis</option>
+        </select>
+        <br>
+        <div class="row">
+            <div class="col">
+                <input name="Nombre" type="text" value="{{producto.nombre}}" class="form-control" placeholder="Nombre" [(ngModel)]="producto.nombre">
+            </div>
+            <div class="col">
+                <input name="Precio" type="number" value="{{producto.precio}}" class="form-control" placeholder="Precio" [(ngModel)]="producto.precio">
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col">
+                <input name="Marca" type="text" value="{{producto.marca}}" class="form-control" placeholder="Marca" [(ngModel)]="producto.marca">
+            </div>
+            <div class="col">
+                <input name="Desc" type="text" value="{{producto.descripcion}}" class="form-control" placeholder="Descripcion" [(ngModel)]="producto.descripcion">
+            </div>
+        </div>
+        <br>
+        <button (click)="guardar()" class="btn btnComprar" style="color: #FFF;" routerLink="../../lista_productos">Guardar</button>
+        <button type="button" class="btn btnComprar" style="color: #FFF; margin-right: 20px;" routerLink="../../lista_productos">Volver</button>
+    </form>
+</div>

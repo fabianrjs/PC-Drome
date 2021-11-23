@@ -1,0 +1,38 @@
+<table  class="table table-sm ml-5">
+    <thead class="titulos">
+        <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Tipo</th>
+        <th scope="col"><img src="../../../assets/basura.png" width="20px" height="20px"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of productos" class="fila">
+            <td class="filas" scope="row">#{{p.id}}</td>
+            <td [routerLink]="['../editar_producto', p.id]" class="filas">{{p.nombre}}</td>
+            <td class="filas">{{p.tipoProducto}}</td>
+            <td class="filas"><img (click)="darProducto(p.id, p.nombre)" data-bs-toggle="modal" data-bs-target="#Modal" alt="equis roja" style="margin-left: 3px;" src="../../../assets/Equis_roja.png" width="12px" height="12px"></td>
+        </tr>
+    </tbody>
+</table>
+
+<!-- Modal -->
+<div style="color: black;" class="modal fade" id="Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Eliminar Producto</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+            ¿Esta seguro de que desea eliminar <strong>{{nombreProducto}}</strong> permanentemente?
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button (click)="eliminar()" type="button" data-bs-dismiss="modal" class="btn btn-primary">Eliminar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div style="width: 100%; display: block; text-align: center;"><a routerLink="../crear_producto"><div type="button" class="btn btnComprar" style="color: #FFF;">Crear Producto</div></a></div>

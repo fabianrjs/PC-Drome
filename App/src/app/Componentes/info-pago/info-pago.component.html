@@ -1,0 +1,18 @@
+<div class="container-fluid" style="margin-bottom: 20px;">
+    <div class="row justify-content-center mt-4">
+        <div class="col-6 p-4 rounded colores">
+          <form [formGroup]="payForm">
+              <input type="text" formControlName="direc" id="dir" placeholder="direccion" required=true>
+              <input type="number" formControlName="tarjeta" id="nTarjeta" placeholder="Número de tarjeta" required=true>
+              <input type="text" formControlName="nombreP" id="nPropietario" placeholder="Nombre de la tarjeta" required=true>
+              <input type="text" formControlName="ven" id="ven" placeholder="dd/aa" required=true>
+              <input type="number" formControlName="cvv" id="cvv" placeholder="cvv" required=true>
+              <input type="submit" (click)="confirmarPago()" value="Confirmar pago" [disabled]="payForm.invalid">        
+          </form>
+        </div>
+        <div class="col-2 p-4 rounded colores">
+            <h4 style="margin-top: 40%;">Total:</h4>
+            <h4>${{totalAPagar}}</h4>
+        </div>
+    </div>
+  </div>

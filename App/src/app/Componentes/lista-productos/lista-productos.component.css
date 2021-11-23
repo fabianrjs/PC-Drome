@@ -1,0 +1,35 @@
+.colores{
+    background-color: #0c2833d4; 
+    border: 1px solid; 
+    border-color:#3f748c;
+    color: #fff;
+}
+
+.titulos{
+    
+    border-top: 1px solid;
+    border-bottom: 1.1px solid;
+    border-color: #55a29e;
+    font-style: none;
+    color: white;
+}
+
+.filas{
+    color: white;
+    border-bottom: 1px solid;
+    border-color: #55a29e;
+}
+
+.fila:hover{
+    background-color: #3f748c;
+    cursor: pointer;
+}
+
+.btnComprar{
+    background-color: #3f748c;
+    width: 200px;
+}
+
+.btnComprar:hover{
+    background-color: #55a29e;
+}

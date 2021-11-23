@@ -1,0 +1,37 @@
+<div class="container-fluid" style="margin-bottom: 20px; width: 100%;">
+    <h2 class="centrado">Crear Producto</h2>
+    <hr style="border:3px solid light; margin-top: 15px;">
+    <form [formGroup]="ProductoForm">
+        <select formControlName="Tipo" class="form-select" aria-label="Default select example">
+            <option value="Procesador">Procesador</option>
+            <option value="RAM">RAM</option>
+            <option value="Disco Duro">Disco Duro</option>
+            <option value="Fuente de Poder">Fuente de Poder</option>
+            <option value="Tarjeta Grafica">Tarjeta Grafica</option>
+            <option value="Tarjeta Madre">Tarjeta Madre</option>
+            <option value="Disipador">Disipador</option>
+            <option value="Chasis">Chasis</option>
+        </select>
+        <br>
+        <div class="row">
+            <div class="col">
+                <input formControlName="Nombre" type="text" class="form-control" placeholder="Nombre">
+            </div>
+            <div class="col">
+                <input formControlName="Precio" type="number" class="form-control" placeholder="Precio">
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col">
+                <input formControlName="Marca" type="text" class="form-control" placeholder="Marca">
+            </div>
+            <div class="col">
+                <input formControlName="Desc" type="text" class="form-control" placeholder="Descripcion">
+            </div>
+        </div>
+        <br>
+        <button (click)="guardar()" type="submit" class="btn btnComprar" style="color: #FFF;" routerLink="../lista_productos">Guardar</button>
+        <button type="button" class="btn btnComprar" style="color: #FFF; margin-right: 20px;" routerLink="../lista_productos">Volver</button>
+    </form>
+</div>

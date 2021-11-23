@@ -1,0 +1,23 @@
+<main>
+    <div class="fondo">
+        <div id="formulario">
+          <!-- Tabs Titles -->
+      
+          <!-- Icon -->
+          <div class="row" style="color: white;">
+            <h1 style="margin-top: 25px;">Iniciar sesión</h1>
+          </div>
+          
+          <span style="color: red;" id="mensaje"></span>
+
+          <!-- Login Form -->
+          <form (submit)="iniciar_sesion()" [formGroup]="loginForm" >
+            <input formControlName="correo" type="text" id="login" class="fadeIn second" placeholder="Correo electronico">
+            <input formControlName="contrasena" type="password" id="password" class="fadeIn third" placeholder="Contraseña">
+            <input type="submit" class="fadeIn fourth" value="Ingresar" [disabled]="loginForm.invalid">
+          </form>
+          
+      
+        </div>
+      </div>
+  </main>
